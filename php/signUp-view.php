@@ -7,7 +7,7 @@ include "connection.php";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Database</title>
+    <title>SignUp-View Data</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
@@ -26,8 +26,8 @@ include "connection.php";
     </thead>
     <tbody>
         <?php
-                $sql = "SELECT * FROM students";
-                $result = $conn->query($sql);
+                $sql = "SELECT * FROM users";
+                $result = mysqli_query($conn,$sql);
                 if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
         ?>
