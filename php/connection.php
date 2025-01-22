@@ -1,12 +1,13 @@
 <?php
-$servername = "localhost";
+$servername = "localhost:3312";
 $username = "root";
-$password = '';
+$password = ""; 
 $db_name = "blogwebsite";
-$conn = new mysqli($servername, $username,$password, $db_name);
-if($conn -> connect_error){
-    die('Connection failed'.$conn -> connect_error);
-}
 
+$conn = mysqli_connect($servername, $username, $password, $db_name);
+
+if($conn->connect_error){
+    die("Connection Failed! " . $conn->connect_error);
+}
     echo "Successfull Connection!";
 ?>

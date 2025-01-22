@@ -1,3 +1,23 @@
 {
-    "liveServer.settings.CustomBrowser": "chrome"
+    "liveServer.settings.CustomBrowser": "chrome",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#1ccdaa",
+        "activityBar.background": "#1ccdaa",
+        "editorGroup.border": "#1ccdaa",
+        "panel.border": "#1ccdaa",
+        "sash.hoverBorder": "#1ccdaa",
+        "sideBar.border": "#1ccdaa",
+        "statusBar.background": "#16a085",
+        "statusBar.border": "#16a085",
+        "statusBar.debuggingBackground": "#a01631",
+        "statusBar.debuggingBorder": "#a01631",
+        "statusBarItem.hoverBackground": "#1ccdaa",
+        "statusBarItem.remoteBackground": "#16a085",
+        "tab.activeBorder": "#1ccdaa",
+        "titleBar.activeBackground": "#16a085",
+        "titleBar.border": "#16a085",
+        "titleBar.inactiveBackground": "#16a08599",
+        "activityBarBadge.background": "#c33be4",
+        "activityBarBadge.foreground": "#e7e7e7"
+    }
 }
