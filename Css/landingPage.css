@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+
+body {
+    background-color: #100f22;
+}
+
+nav ul{
+    background: #302e60;
+}
+
+.card{
+    background-color: #302e60 ;
+    transition: transform 0.3s;
+    }
+
+.card:hover{
+    transform: scale(1.05);
+}
+
