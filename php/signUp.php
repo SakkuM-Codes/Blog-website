@@ -1,6 +1,6 @@
 <?php
       include "connection.php";
-    if(isset($_POST['submit'])) {
+       if(isset($_POST['submit'])) {
         $username = $_POST['username'];
         $email = $_POST['email'];
         $passwd = $_POST['passwd'];
@@ -12,7 +12,7 @@
 
         if($result === TRUE){
             echo "New record created successfully";
-            header('Location: signUp-view.php');
+            header('Location: login.php');
         }else{
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -26,7 +26,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "/Css/signUp.css"  type="text/css" />
+    <style><?php include  'F:/New folder/htdocs/Blog website/CSS/signUp.css'; ?></style>
     <title>Sign Up</title>
 </head>
 <body>
@@ -34,10 +34,10 @@
     <div class="container">
         <h2>Register</h2>
         <div class="input-box">
-            <input type="text" placeholder="Username" name="username">
+            <input type="text" placeholder="Username" name="username" required>
         </div>
         <div class="input-box">
-        <input type="email" placeholder="Email" name="email">
+        <input type="email" placeholder="Email" name="email" required>
     </div>
     <div class="input-box">
         <input type="password" placeholder="Password" name="passwd">
@@ -46,9 +46,9 @@
         <input type="number" placeholder="Mobile No." name="phone_number">
     </div>
         <button class="btn" type="submit" name="submit">Register</button>
-        <p class="forget"><a href="#">Already User</a> Or <a href="login.html">Login</a></p>
+        <p class="forget"><a href="#">Already User</a> Or <a href="login.php">Login</a></p>
     </div>
-</form>
+</form> 
 </body>
 </html>
 
