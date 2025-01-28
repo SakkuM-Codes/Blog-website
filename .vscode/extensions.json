@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "hookyqr.beautify",
+        "bradlc.vscode-tailwindcss",
+        "mohamedbenhida.laravel-intellisense",
+        "rifi2k.format-html-in-php",
+        "gerane.theme-peacock",
+        "johnpapa.vscode-peacock"
+    ]
+}
