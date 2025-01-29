@@ -12,10 +12,10 @@
     <div class="container">
         <h2>Login</h2>
         <div class="input-box">
-        <input type="email" placeholder="Email" name="email">
+        <input type="email" placeholder="Email" name="email" required>
     </div>
     <div class="input-box">
-        <input type="password" placeholder="Password" name="passwd">
+        <input type="password" placeholder="Password" name="passwd" required>
     </div>
         <button class="btn" type="submit" name="submit">Login</button>
         <p class="forget"><a href="#">Forget your password?</a> Or <a href="signUp.php">Register</a></p>

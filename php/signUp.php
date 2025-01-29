@@ -40,10 +40,10 @@
         <input type="email" placeholder="Email" name="email" required>
     </div>
     <div class="input-box">
-        <input type="password" placeholder="Password" name="passwd">
+        <input type="password" placeholder="Password" name="passwd" required>
     </div>
     <div class="input-box">
-        <input type="number" placeholder="Mobile No." name="phone_number">
+        <input type="number" placeholder="Mobile No." name="phone_number" required>
     </div>
         <button class="btn" type="submit" name="submit">Register</button>
         <p class="forget"><a href="#">Already User</a> Or <a href="login.php">Login</a></p>
