@@ -9,6 +9,7 @@
 
   <body class="bg-slate-950 p-0 m-0 border-box flex-col relative">
       <?php include 'header.php'?>
+      <?php include 'filter-data.php'?>
 
   <div class="flex flex-wrap justify-center gap-7	mx-4 my-12">
     <!-- Card-1 -->
@@ -20,7 +21,7 @@
         <p class="text-lg pl-2 text-white">Vadodara Garden is a best garden and has many structures formed with flowers</p>
         <button class="text-base absolute cursor-pointer pb-1">
         <a class="bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-sm m-1 transition-colors"
-            href="detail.html">Read More</a></button>
+            href="detail.php">Read More</a></button>
       </div>
     </div>
 
@@ -32,8 +33,7 @@
         <h3 class="text-2xl font-normal pl-2 text-white">Amazon Forest</h3>
         <p class="text-lg pl-2 text-white">Amazon Forest is one of the largest forest in the world and It has many species</p>
         <button class="text-base absolute cursor-pointer pb-1"><a
-            class="bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-sm m-1 transition-colors" href="">Read
-            More</a></button>
+            class="bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-sm m-1 transition-colors" href="detail.php">Read More</a></button>
       </div>
     </div>
   </div>

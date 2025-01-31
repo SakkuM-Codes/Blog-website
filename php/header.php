@@ -24,7 +24,7 @@
                 <ul class="py-2 text-sm text-white" aria-labelledby="dropdownHoverButton">
                   <li>
                     <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block text-white px-12 py-3 bg-indigo-900 text-center " type="button">
-                    <a href="createBlog.php" class="hover:underline ">Create Blog</a>
+                    <a href="createBlog.php" class="hover:underline">Create Blog</a>
                     </button>
                   </li>
                   <li>
@@ -36,6 +36,17 @@
                 </ul>
           </div>
         </li>
+       <div>
+          <li>
+            <?php $isLoggedIn = isset($_SESSION['auth']);?>
+            <?php if (!$isLoggedIn): ?>
+                <button class="flex flex-wrap justify-between w-full py-2 px-3 text-white rounded-sm bg-indigo-900 md:hover:underline md:border-0 md:p-0 md:w-auto">
+                    <a href="/login.php" class="hover:underline">LogIn</a>
+                </button>
+                <a href="/signup.php" class="text-white hover:underline">Sign Up</a>
+            <?php endif; ?>
+          </li>
+        </div>
       </ul>
     </nav>
   </div>
