@@ -19,23 +19,23 @@
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
         <div class="hidden  ease-in-out" data-carousel-item>
-            <img src="http://localhost/Blog website/Images/image1.jpg" class="absolute block max-w-50 h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+            <img src="http://localhost/Blog website/Images/image1.jpg" class="absolute block max-w-full h-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
         <!-- Item 2 -->
         <div class="hidden  ease-in-out" data-carousel-item="active">
-            <img src="http://localhost/Blog website/Images/image2.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+            <img src="http://localhost/Blog website/Images/image2.jpg" class="absolute block max-w-full h-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
         <!-- Item 3 -->
         <div class="hidden  ease-in-out" data-carousel-item>
-            <img src="http://localhost/Blog website/Images/image3.webp" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+            <img src="http://localhost/Blog website/Images/image3.webp" class="absolute block max-w-full h-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
         <!-- Item 4 -->
         <div class="hidden ease-in-out" data-carousel-item>
-            <img src="http://localhost/Blog website/Images/image4.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+            <img src="http://localhost/Blog website/Images/image4.jpg" class="absolute block max-w-full h-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="http://localhost/Blog website/Images/image5.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+            <img src="http://localhost/Blog website/Images/image5.jpg" class="absolute block max-w-full h-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
     </div>
     <!-- Slider controls -->

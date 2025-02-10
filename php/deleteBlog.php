@@ -1,3 +1,38 @@
+<?php
+
+include('connection.php');
+
+if (isset($_GET['blog_Id'])) {
+    $blog_Id = $_GET['blog_Id']; 
+} else {
+    die("No ID specified.");
+}
+
+
+$sql = "DELETE FROM blogs WHERE blog_Id = ?";
+
+
+$stmt = $conn->prepare($sql);
+if ($stmt) {
+    
+    $stmt->bind_param("i", $blog_Id);
+    
+    if ($stmt->execute()) {
+        echo "Blog post deleted successfully!";
+        header('Location: landingPage.php');
+    } else {
+        echo "Error deleting blog post: " . $stmt->error;
+    }
+    
+    $stmt->close();
+} else {
+    echo "Error preparing statement: " . $conn->error;
+}
+// Close the database connection
+$conn->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +57,9 @@
         <textarea id="message" name="editor" required class="mySummernote" placeholder="Description"></textarea>
         </div>
         <div class="upload-image">
-        <input name="images" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" aria-describedby="file_input_help" id="file_input" type="file">
-        <p class="mt-1 text-sm text-gray-500" id="file_input_help" required>SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
+        <input name="images" required class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" aria-describedby="file_input_help" id="file_input" type="file">
+        <p class="mt-1 text-sm text-gray-500" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
         </div>
-            <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid']; ?>">
             <button class="btn" type="submit" name="submit">Submit</button>
         </div>
     </form> 
@@ -38,7 +72,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-  <script>
+   <script>
     $(document).ready(function() {
         $(".mySummernote").summernote({
             height: 250
@@ -47,26 +81,6 @@
     });
 </script>
 
-  <script>
-  // Form validation function
-        function validateForm() {
-            // Check if Summernote editor is empty
-            var summernoteContent = $(".mySummernote").summernote('code').trim();
-            if (summernoteContent === "" || summernoteContent === "<p><br></p>") {
-                alert("Description is required.");
-                return false;
-            }
-            // Check if a file is selected
-            var fileInput = document.getElementById("file_input");
-            if (fileInput.files.length === 0) {
-                alert("Please upload an image.");
-                return false;
-            }
-            return true; // Allow form submission
-        }
-    </script>
-</body>
-</html>
 
 
 

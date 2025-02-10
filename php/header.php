@@ -36,17 +36,27 @@
                 </ul>
           </div>
         </li>
-       <div>
-          <li>
-            <?php $isLoggedIn = isset($_SESSION['auth']);?>
-            <?php if (!$isLoggedIn): ?>
-                <button class="flex flex-wrap justify-between w-full py-2 px-3 text-white rounded-sm bg-indigo-900 md:hover:underline md:border-0 md:p-0 md:w-auto">
-                    <a href="/login.php" class="hover:underline">LogIn</a>
-                </button>
-                <a href="/signup.php" class="text-white hover:underline">Sign Up</a>
-            <?php endif; ?>
-          </li>
-        </div>
+       <div class="flex flex-wrap items-left">
+    <li>
+        <?php
+session_start();
+$isLoggedIn = isset($_SESSION['auth']);
+?>
+<div class="flex flex-wrap items-left">
+    <li>
+        <?php if (!$isLoggedIn): ?>
+            <button class="flex flex-wrap justify-between w-full py-2 px-3 text-white rounded-sm bg-indigo-900 md:hover:underline md:border-0 md:p-0 md:w-auto">
+                <a href="login.php" class="hover:underline">LogIn</a>
+            </button>
+            <a href="signUp.php" class="text-white hover:underline">Sign Up</a>
+        <?php else: ?>
+            <form action="logout.php" method="POST" class="flex items-center space-x-3">
+                <button type="submit" class="text-white hover:underline">LogOut</button>
+            </form>
+        <?php endif; ?>
+    </li>
+</div>
+</div>
       </ul>
     </nav>
   </div>

@@ -7,6 +7,7 @@
     <title>View Cards</title>
 </head>
     <?php include 'connection.php'?>
+    
 
 <body class="m-0 p-0">
 
@@ -53,13 +54,13 @@
                                             <a class="bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-sm m-1 transition-colors"
                                             href="detail.php?slug=<?= $row['slug']; ?>">Read More</a>
                                         </button>
-                                            <div class="text-white">
-                                            <div class="text-xl hover:underline">
-                                            <a class="" href="edit-card">Edit</a>
-                                            <a class="" href="update-card">Update</a>
+                                            <div class="text-white mt-4">
+                                            <div class="flex space-x-4">
+                                                <a href="editBlog.php?slug=<?= $row['slug']; ?>" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">Edit</a>
+                                                <a href="deleteBlog.php?slug=<?= $row['slug']; ?>" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">Delete</a>
                                             </div>
                                             </div>
-                                    </div>
+                                        </div>
                             <?php
                             }
                         }

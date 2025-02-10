@@ -6,7 +6,6 @@
         "rifi2k.format-html-in-php",
         "gerane.theme-peacock",
         "johnpapa.vscode-peacock",
-        "xdebug.php-pack",
         "esbenp.prettier-vscode"
     ]
 }
